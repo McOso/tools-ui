@@ -10,7 +10,7 @@ export const BirthdayCard: React.FC<{ person: any }> = (props) => {
   return (
     <div
       className={classNames(
-        'rounded-lg py-4 px-4 xs:px-20 text-center flex-col items-center bg-darkened'
+        'rounded-lg my-1 py-4 px-4 xs:px-20 text-center flex-col items-center bg-darkened'
       )}
     >
       <p>{person.fields.Name}</p>
