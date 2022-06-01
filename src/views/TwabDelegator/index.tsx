@@ -49,7 +49,7 @@ export const TwabDelegator: React.FC = () => {
         />
         {birthdaysToday.status === "loading" ? (<p>loading ...</p>) : birthdaysToday.status === "error" ? (
           <span> Error: {JSON.stringify(birthdaysToday.error)}</span>
-        ) : <BirthdayDelegation birthdays={birthdaysToday.data} /> }
+        ) : birthdaysToday.data.length > 0 ? <BirthdayDelegation birthdays={birthdaysToday.data} /> : null }
         <DelegationList delegator={delegator} chainId={chainId} setDelegator={setDelegator} />
       </PagePadding>
     </Layout>
