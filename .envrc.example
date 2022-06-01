@@ -10,6 +10,9 @@ export NEXT_PUBLIC_ALCHEMY_API_KEY=
 export NEXT_PUBLIC_ETHERSCAN_API_KEY=
 export NEXT_PUBLIC_INFURA_ID=
 
+# API key for read only Airtable calls
+export NEXT_PUBLIC_AIRTABLE_KEY=
+
 # Optional
 # Generate additional files for analyzing builds
 # export ANALYZE=true

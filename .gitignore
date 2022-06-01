@@ -49,3 +49,6 @@ functions-out
 
 # Sentry
 .sentryclirc
+
+# VS Code config
+.vscode/*

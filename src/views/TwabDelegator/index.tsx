@@ -15,6 +15,7 @@ import {
 import { useUpdateAtom } from 'jotai/utils'
 import { useUsersAddress } from '@pooltogether/wallet-connection'
 import { useTranslation } from 'react-i18next'
+import { BirthdayDelegation } from '@twabDelegator/BirthdayDelegation'
 
 // TODO: Go to confirmation modal while wallet is on wrong network. Switch networks. Lotsa problems.
 export const TwabDelegator: React.FC = () => {
@@ -44,6 +45,7 @@ export const TwabDelegator: React.FC = () => {
           setChainId={setChainId}
           className='mb-8'
         />
+        <BirthdayDelegation />
         <DelegationList delegator={delegator} chainId={chainId} setDelegator={setDelegator} />
       </PagePadding>
     </Layout>

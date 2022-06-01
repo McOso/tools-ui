@@ -15,6 +15,10 @@ export const RPC_API_KEYS = {
   infura: process.env.NEXT_PUBLIC_INFURA_ID
 }
 
+export const OTHER_API_KEYS = {
+  airtable: process.env.NEXT_PUBLIC_AIRTABLE_KEY
+}
+
 export const SUPPORTED_CHAIN_IDS: {
   [key: string]: number[]
 } = Object.freeze({
