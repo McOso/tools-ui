@@ -1,9 +1,8 @@
 import classNames from 'classnames'
 import { BirthdayCard } from './BirthdayCard';
-import { useBirthdays } from './hooks/useBirthdays'
 
-export const BirthdayDelegation: React.FC<{ className?: string }> = (props) => {
-  const birthdaysToday = useBirthdays();
+export const BirthdayDelegation: React.FC<{ birthdays: any }> = (props) => {
+  const {birthdays} = props;
 
   return (
     <div
@@ -17,9 +16,9 @@ export const BirthdayDelegation: React.FC<{ className?: string }> = (props) => {
       <p className='font-bold mb-1'>Testing here:</p>
       More testing
 
-    {birthdaysToday.status === "loading" ? (<p>loading ...</p>) : birthdaysToday.status === "error" ? (
-          <span> Error: {JSON.stringify(birthdaysToday.error)}</span>
-        ) : <BirthdayCard birthdays={birthdaysToday.data} /> }
+      {birthdays.map((person, index) => (
+        <BirthdayCard key={`birthday-${index}`} person={person} />
+      ))}
       
     </div>
   )
